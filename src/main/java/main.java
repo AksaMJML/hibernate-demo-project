@@ -11,6 +11,7 @@ public class main {
 
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
+
         SessionFactory factory = config.buildSessionFactory();
         Session session = factory.openSession();
         session.persist(student);
