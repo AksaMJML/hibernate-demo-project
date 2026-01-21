@@ -1,5 +1,6 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class main {
@@ -15,6 +16,8 @@ public class main {
 
         SessionFactory factory = config.buildSessionFactory();
         Session session = factory.openSession();
+        Transaction transaction = session.beginTransaction();
         session.persist(student);
+        transaction.commit();
     }
 }
