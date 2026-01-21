@@ -21,6 +21,8 @@ public class main {
 
         System.out.println(session.find(Student.class,3));
 
+        session.remove(session.find(Student.class,3));
+
         transaction.commit();
     }
 }
