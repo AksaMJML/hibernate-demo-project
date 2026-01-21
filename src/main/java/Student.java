@@ -1,7 +1,9 @@
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "student_datails")
 public class Student {
 
     @Id
