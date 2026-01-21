@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 public class main {
     public static void main(String[] args) {
         Student student = new Student();
-        student.setId(3);
+        student.setId(4);
         student.setName("Shanu Peay");
         student.setAge(24);
 
@@ -18,6 +18,6 @@ public class main {
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
         session.persist(student);
-        //transaction.commit();
+        transaction.commit();
     }
 }
