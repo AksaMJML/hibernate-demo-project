@@ -26,5 +26,7 @@ public class main {
         session.merge(student);
 
         transaction.commit();
+        session.close();
+        factory.close();
     }
 }
