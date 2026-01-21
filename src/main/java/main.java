@@ -17,7 +17,10 @@ public class main {
         SessionFactory factory = config.buildSessionFactory();
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.persist(student);
+        //session.persist(student);
+
+        System.out.println(session.find(Student.class,3));
+
         transaction.commit();
     }
 }
