@@ -7,7 +7,7 @@ public class main {
     public static void main(String[] args) {
         Student student = new Student();
         student.setId(4);
-        student.setName("Shanu Peay");
+        student.setName("Shanuka");
         student.setAge(24);
 
         Configuration config = new Configuration();
@@ -19,9 +19,11 @@ public class main {
         Transaction transaction = session.beginTransaction();
         //session.persist(student);
 
-        System.out.println(session.find(Student.class,3));
+       // System.out.println(session.find(Student.class,3));
 
-        session.remove(session.find(Student.class,3));
+        //session.remove(session.find(Student.class,3));
+
+        session.merge(student);
 
         transaction.commit();
     }
